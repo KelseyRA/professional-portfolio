@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    width: 1500px;
+    margin: 0 auto;
+    /* background-color: #314B37; */
+    background-image: url(./images/thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+}
+
+header {
+    padding: 25px;
+    background-color:#3F6E49;
+    color:white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+header ul li {
+    float:right;
+    display:inline;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 12px;
+}
+
+h1 {
+    display: inline;
+    padding-top: 20px;
+    margin: 5px;
+    font: 48px;
+}
+
+.content {
+    display: block;
+    background-color:#EEF4F0 ;
+    padding: 32px;
+    align-items: center;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin: 12px;
+    padding: 12px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.content img {
+    max-width: 250px;
+    display: inline;
+    margin-left:24px;
+}
+
+.content p {
+    display: flex;
+    float: right;
+    /* stext-align: center; */
+}
+
+.card {
+    background-color: #314B37;
+    padding: 16px;;
+}
+
+.card h2 {
+    color: white;
+    margin: 12px;
+    padding: 12px;
+}
+
+#hero-image {
+    min-width: 450px;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin: 24px 48px 24px 24px;
+    padding: 24px;
+}
+
+.card img{
+    max-width: 300px;
+    margin: 24px;
+    justify-content: space-between;
+    border-radius:90px;
+}
+
+footer {
+    background-color: #3F6E49;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+footer h2{
+    margin:24px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+
