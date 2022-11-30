@@ -9,8 +9,7 @@
 body {
     width: 1500px;
     margin: 0 auto;
-    /* background-color: #314B37; */
-    background-image: url(./images/thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background: linear-gradient(#314B37,#A9ADAA);
 }
 
 header {
@@ -23,12 +22,17 @@ a {
     color: white;
     text-decoration: none;
 }
+
 header ul li {
     float:right;
     display:inline;
     list-style: none;
     padding-left: 20px;
     padding-top: 12px;
+}
+
+a:hover {
+    color: black;
 }
 
 h1 {
@@ -39,10 +43,11 @@ h1 {
 }
 
 .content {
-    display: block;
+    display: flex;
     background-color:#EEF4F0 ;
     padding: 32px;
     align-items: center;
+    border-bottom: dashed #6e8d75;
 }
 
 .content h2 {
@@ -58,45 +63,73 @@ h1 {
 .content img {
     max-width: 250px;
     display: inline;
-    margin-left:24px;
+    margin:24px;
+    border: dashed #6e8d75;
+    border-radius: 100px;
 }
 
 .content p {
     display: flex;
     float: right;
-    /* stext-align: center; */
+    flex-wrap: wrap;
 }
 
-.card {
+main {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #314B37;
-    padding: 16px;;
+    padding: 12px;
+    border-top: dashed #6e8d75;
 }
 
-.card h2 {
+main h2 {
     color: white;
     margin: 12px;
     padding: 12px;
 }
 
-#hero-image {
-    min-width: 450px;
+.card {
     display: flex;
-    flex-direction: row;
-    float: left;
-    margin: 24px 48px 24px 24px;
-    padding: 24px;
+    background-color: #314B37;
+    padding: 36px;
 }
 
-.card img{
-    max-width: 300px;
-    margin: 24px;
-    justify-content: space-between;
-    border-radius:90px;
+#hero-image {
+    height: 600px;
+    max-width: 500px;
+    margin:48px;
+    border-radius: 50px;
+    position: relative;
+    top: -70px;
+}
+
+#hero-image:hover {
+    filter: blur(4px);
+    transition: 1s;
+}
+
+.images { 
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project-images{
+    height: 250px;
+    min-width: 250x;
+    border-radius: 50px;
+}
+
+.project-images:hover{
+    filter: blur(4px);
+    transition: 1s;
 }
 
 footer {
     background-color: #3F6E49;
-    padding: 16px;
+    margin-bottom: 24px;
+    padding: 24px;
     color: white;
     text-align: center;
 }
@@ -115,5 +148,18 @@ footer ul {
 footer ul li {
     margin-left: 20px;
 }
+
+@media screen and (max-width: 980px){
+.project-images {
+    width: 75%;
+}
+}
+
+@media screen and (max-width: 980px){
+#hero-image {
+    width: 25%;
+}
+}
+
 
 
