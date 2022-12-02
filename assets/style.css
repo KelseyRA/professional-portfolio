@@ -64,8 +64,7 @@ h1 {
     max-width: 250px;
     display: inline;
     margin:24px;
-    border: dashed #6e8d75;
-    border-radius: 100px;
+    border: solid #6e8d75;
 }
 
 .content p {
@@ -74,51 +73,69 @@ h1 {
     flex-wrap: wrap;
 }
 
+
 main {
     display: flex;
     flex-wrap: wrap;
     background-color: #314B37;
     padding: 12px;
     border-top: dashed #6e8d75;
+    border-bottom: dashed white;
+    justify-content: center;
 }
 
 main h2 {
     color: white;
     margin: 12px;
     padding: 12px;
+    text-align: center;
 }
 
-.card {
+#card {
     display: flex;
     background-color: #314B37;
     padding: 36px;
 }
 
-#hero-image {
-    height: 600px;
-    max-width: 500px;
-    margin:48px;
+/*#hero-image {
+    height: 565px;
     border-radius: 50px;
-    position: relative;
-    top: -70px;
 }
 
 #hero-image:hover {
     filter: blur(4px);
     transition: 1s;
-}
+}*/
+
+/* .images img:nth-child(-n+1) { 
+    border-radius: 50px;
+    width: 17rem;
+}*/
 
 .images { 
-    height: 600px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+
+#large-image {
+    width: 25rem;
+    padding: 12px;
+}
+
+#large-image:hover{
+    filter: blur(4px);
+    transition: 1s;
 }
 
 .project-images{
-    height: 250px;
-    min-width: 250x;
-    border-radius: 50px;
+    width: 25rem;
+    padding: 12px;
+    padding-left: 36px;
+    min-height: 274.66px;
+    max-height: 274.66px; 
+    
 }
 
 .project-images:hover{
@@ -132,6 +149,7 @@ footer {
     padding: 24px;
     color: white;
     text-align: center;
+    border-top: dashed white;
 }
 
 footer h2{
@@ -149,17 +167,24 @@ footer ul li {
     margin-left: 20px;
 }
 
-@media screen and (max-width: 980px){
-.project-images {
-    width: 75%;
+
+@media screen and (max-width: 1282px){
+.flex-item {
+    width: 100%;
 }
 }
 
-@media screen and (max-width: 980px){
-#hero-image {
-    width: 25%;
+@media screen and (max-width: 770px){
+.flex-item {
+    width: 50%;
+    
 }
 }
 
+@media screen and (max-width: 1282px) {
+main { 
+    justify-content: left;  
+}
+}
 
 
