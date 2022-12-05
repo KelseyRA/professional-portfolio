@@ -7,9 +7,12 @@
 }
 
 body {
-    width: 1500px;
+    width: 90%;
     margin: 0 auto;
     background: linear-gradient(#314B37,#A9ADAA);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: scroll;
 }
 
 header {
@@ -54,7 +57,7 @@ h1 {
     font-size: 24px;
     margin: 12px;
     padding: 12px;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: row;
     
@@ -71,6 +74,7 @@ h1 {
     display: flex;
     float: right;
     flex-wrap: wrap;
+    overflow-wrap: normal;
 }
 
 
@@ -97,21 +101,6 @@ main h2 {
     padding: 36px;
 }
 
-/*#hero-image {
-    height: 565px;
-    border-radius: 50px;
-}
-
-#hero-image:hover {
-    filter: blur(4px);
-    transition: 1s;
-}*/
-
-/* .images img:nth-child(-n+1) { 
-    border-radius: 50px;
-    width: 17rem;
-}*/
-
 .images { 
     display: flex;
     flex-wrap: wrap;
@@ -122,11 +111,12 @@ main h2 {
 #large-image {
     width: 25rem;
     padding: 12px;
+    filter: brightness(40%);
 }
 
 #large-image:hover{
-    filter: blur(4px);
-    transition: 1s;
+    transition: 0.5s;
+    color: black;
 }
 
 .project-images{
@@ -134,13 +124,39 @@ main h2 {
     padding: 12px;
     padding-left: 36px;
     min-height: 274.66px;
-    max-height: 274.66px; 
-    
+    max-height: 274.66px;
+    filter: brightness(40%); 
+    position: relative;
+}
+
+.click-link {
+    position: relative;
+    text-align: center;
+}
+.click-link h3{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 25%;
+    right: 25%;
+    color: white;
+}
+
+.click-link h3:hover{
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px rgb(10, 73, 52),
+    0 0 151px rgb(14, 77, 56);
 }
 
 .project-images:hover{
-    filter: blur(4px);
-    transition: 1s;
+    filter: blur(10px), brightness(30%);
+    transition: 0.5s;
 }
 
 footer {
@@ -168,23 +184,32 @@ footer ul li {
 }
 
 
-@media screen and (max-width: 1282px){
-.flex-item {
-    width: 100%;
+@media screen and (max-width: 1270px){
+.click-link {
+    flex: 50%;
+    flex-direction: column;
+    padding-right: 40px;
 }
 }
 
-@media screen and (max-width: 770px){
-.flex-item {
-    width: 50%;
-    
+@media screen and (max-width: 1270px){
+#my-work {
+    justify-content: left;
+}
+}  
+
+@media screen and (max-width: 1270px){
+    #large-image {
+        flex-grow: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+.click-link {
+    flex: 100%;
+    flex-direction: column;
 }
 }
 
-@media screen and (max-width: 1282px) {
-main { 
-    justify-content: left;  
-}
-}
 
 
