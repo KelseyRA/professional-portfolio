@@ -7,13 +7,15 @@
 }
 
 body {
-    width: 90%;
+    width: 80%;
+    height: 100%;
     margin: 0 auto;
-    background: linear-gradient(#314B37,#A9ADAA);
+    background: linear-gradient( white, #3F6E49, #314B37,black );
     background-repeat: no-repeat;
-    background-size: contain;
-    overflow: scroll;
+    background-attachment: fixed;
 }
+
+/* header styling*/
 
 header {
     padding: 25px;
@@ -21,10 +23,6 @@ header {
     color:white;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
 
 header ul li {
     float:right;
@@ -34,16 +32,24 @@ header ul li {
     padding-top: 12px;
 }
 
-a:hover {
-    color: black;
-}
-
 h1 {
     display: inline;
     padding-top: 20px;
     margin: 5px;
-    font: 48px;
 }
+
+/* anchor styling for full page*/
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+/* about me and profile content styling*/
 
 .content {
     display: flex;
@@ -70,18 +76,12 @@ h1 {
     border: solid #6e8d75;
 }
 
-.content p {
-    display: flex;
-    float: right;
-    flex-wrap: wrap;
-    overflow-wrap: normal;
-}
-
+/* my work section and link with large image styles*/
 
 main {
     display: flex;
     flex-wrap: wrap;
-    background-color: #314B37;
+    background-color: #314b378a;
     padding: 12px;
     border-top: dashed #6e8d75;
     border-bottom: dashed white;
@@ -97,9 +97,11 @@ main h2 {
 
 #card {
     display: flex;
-    background-color: #314B37;
+    background-color: #314b3700;
     padding: 36px;
 }
+
+/*flex container for smaller images*/
 
 .images { 
     display: flex;
@@ -118,7 +120,6 @@ main h2 {
     transition: 0.5s;
     color: black;
 }
-
 .project-images{
     width: 25rem;
     padding: 12px;
@@ -141,6 +142,7 @@ main h2 {
     right: 25%;
     color: white;
 }
+/* neon glow for anchor hover*/
 
 .click-link h3:hover{
     text-shadow:
@@ -158,6 +160,8 @@ main h2 {
     filter: blur(10px), brightness(30%);
     transition: 0.5s;
 }
+
+/*contact me/footer styles*/
 
 footer {
     background-color: #3F6E49;
@@ -183,32 +187,51 @@ footer ul li {
     margin-left: 20px;
 }
 
+/*Adjusts section display from flex to box as viewport decreases*/
 
-@media screen and (max-width: 1270px){
-.click-link {
-    flex: 50%;
-    flex-direction: column;
-    padding-right: 40px;
-}
+@media screen and (max-width: 900px) {
+   .content {
+    display: block;
+    margin: auto;
+   } 
 }
 
-@media screen and (max-width: 1270px){
-#my-work {
-    justify-content: left;
-}
-}  
-
-@media screen and (max-width: 1270px){
-    #large-image {
-        flex-grow: 50%;
+@media screen and (max-width: 900px) {
+    .content h2 {
+        margin-left: 40%;
+        margin-right: 40%;
     }
 }
 
-@media screen and (max-width: 1100px){
-.click-link {
-    flex: 100%;
-    flex-direction: column;
+@media screen and (max-width: 900px) {
+    .content img {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
 }
+
+
+/* Adjust images from flex to block display as viewport decreases*/
+
+@media screen and (max-width: 1200px){
+    #card {
+        display:block;
+    }
+}
+
+
+/*adjusts larger images margins to better align as viewport decreases in size*/
+
+@media screen and (max-width: 1270px){
+    #large-image {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    #large-image {
+        margin-top: 0px;
+    }
 }
 
 
